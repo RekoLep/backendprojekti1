@@ -7,6 +7,6 @@ RUN mvn clean package
 
 # Jar Package
 FROM eclipse-temurin:17-jre-focal
-COPY --from=build /home/app/target/StudentListSecureDB-0.0.1-SNAPSHOT.jar /usr/local/lib/studentlistsecuredb.jar
+COPY --from=build /home/app/target/yolento-0.0.1-SNAPSHOT.jar /usr/local/lib/yolento.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/usr/local/lib/studentlistsecuredb.jar"]
